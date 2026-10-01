@@ -20,7 +20,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 104px; }
 body { margin: 0; min-width: 320px; background: var(--noir); }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
@@ -30,7 +30,8 @@ img { display: block; max-width: 100%; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .site-shell { overflow: clip; }
 .page-shell { width: min(1240px, calc(100% - 80px)); margin: 0 auto; }
-.section { padding: 150px 0; background: var(--noir); }
+.section { padding: 150px 0; background: var(--noir); scroll-margin-top: 104px; }
+.hero { scroll-margin-top: 104px; }
 
 .eyebrow { display: flex; align-items: center; gap: 11px; margin: 0 0 25px; color: var(--copper); font: 500 11px/1 'DM Mono', monospace; letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow span { display: inline-block; width: 28px; height: 1px; background: currentColor; }
@@ -169,6 +170,7 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 600px) {
+  html { scroll-padding-top: 82px; }
   .page-shell, .site-header__inner { width: calc(100% - 40px); }.section { padding: 96px 0; }.section-intro h2 { font-size: clamp(39px, 12vw, 55px); }.section-intro__copy { margin-top: 22px; font-size: 15px; line-height: 1.65; }
   .brand-mark__word { font-size: 21px; }.brand-mark__sub { font-size: 8px; }.site-header__inner { height: 73px; }
   .hero { min-height: 730px; height: 100svh; }.hero__media { background-position: 62% center; }.hero__shade { background: linear-gradient(90deg, rgba(8,9,10,.91) 0%, rgba(8,9,10,.43) 100%), linear-gradient(0deg, rgba(8,9,10,.85) 0%, transparent 48%); }.hero__content { padding-top: 145px; padding-bottom: 30px; }.hero h1 { font-size: clamp(49px, 14vw, 68px); line-height: .93; }.hero__lead { margin-top: 24px; font-size: 14px; }.hero__actions { align-items: flex-start; flex-direction: column; gap: 22px; margin-top: 28px; }.trust-row { justify-content: space-between; width: 100%; gap: 12px; }.trust-row strong { font-size: 19px; }.trust-row span { font-size: 8px; letter-spacing: 0; }.trust-row svg { width: 10px; }
